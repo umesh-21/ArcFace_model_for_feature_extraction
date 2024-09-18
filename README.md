@@ -35,7 +35,7 @@ from feature_extraction import get_feature
 
 # Load and preprocess the image
 image = Image.open('path_to_image.jpg')
-transform = transforms.Compose([transforms.Resize((256, 256)), transforms.ToTensor()])
+transform = transforms.Compose([transforms.Resize((112, 112)), transforms.ToTensor()])
 input_image = transform(image).unsqueeze(0)  # Add batch dimension
 
 # Extract features using ArcFace
